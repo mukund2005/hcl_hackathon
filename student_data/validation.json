@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "students": 30,
+    "courses": 6,
+    "attendance": 90,
+    "results": 90
+  },
+  "violations": [],
+  "valid": true
+}

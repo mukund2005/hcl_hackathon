@@ -1,0 +1,132 @@
+{
+  "health": {
+    "status": "ready",
+    "api": "ready",
+    "sqlite": "ready",
+    "vector_store": "ready",
+    "chunks": 170,
+    "llm": "mock",
+    "model": "qwen2.5:7b-instruct",
+    "embedding_backend": "sentence_transformers",
+    "mock_llm": true
+  },
+  "response": {
+    "trace_id": "e831dfdd8a8c4ada",
+    "answer": "{\"classes_held\": 40, \"classes_attended\": 30, \"attendance_pct\": 75.0, \"course_code\": \"CS201\", \"result\": \"ATTENDANCE_REQUIREMENT_MET\"}",
+    "answer_type": "calculated",
+    "citations": [
+      {
+        "doc_id": "NITJ-UG-2023",
+        "title": "NITJ Undergraduate Ordinances and Regulations 2023",
+        "section": "R8.1",
+        "page": 6,
+        "version": "2023",
+        "effective_from": "2023-07-01"
+      }
+    ],
+    "tools_invoked": [
+      {
+        "tool": "get_attendance",
+        "input": {
+          "course_code": "CS201"
+        },
+        "output": {
+          "classes_held": 40,
+          "classes_attended": 30,
+          "attendance_pct": 75.0,
+          "course_code": "CS201"
+        }
+      },
+      {
+        "tool": "exam_eligibility",
+        "input": {
+          "course_code": "CS201"
+        },
+        "output": {
+          "classes_held": 40,
+          "classes_attended": 30,
+          "attendance_pct": 75.0,
+          "course_code": "CS201",
+          "result": "ATTENDANCE_REQUIREMENT_MET"
+        }
+      }
+    ],
+    "applied_rules": [
+      {
+        "rule_id": "NITJ-UG-2023-33-min_attendance_pct",
+        "parameter": "min_attendance_pct",
+        "operator": ">=",
+        "value": "75",
+        "source_doc_id": "NITJ-UG-2023",
+        "source_section": "R8.1"
+      }
+    ],
+    "conflicts_detected": [],
+    "assumptions": [
+      "Document states applicable from the 2023 batch, without an exact commencement date. 2023-07-01 is an academic-year convention for this prototype, not a verified legal effective date. Verify before judging historical questions.",
+      "General attendance condition only. NITJ R8.4 contains a female-student exception and R8.3 a discretionary condonation route. These personal circumstances are absent from the fixed student schema; this is not a complete eligibility certificate.",
+      "This MVP checks the documented attendance requirement only; it does not certify all exam conditions."
+    ],
+    "explanation": "Development mock: the displayed result was calculated by Python tools.",
+    "as_of_date": "2026-07-01"
+  },
+  "audit": {
+    "trace_id": "e831dfdd8a8c4ada",
+    "timestamp": "2026-10-10T10:27:58.612338+00:00",
+    "answer_type": "calculated",
+    "sources_retrieved": [],
+    "sources_applied": [
+      {
+        "doc_id": "NITJ-UG-2023",
+        "title": "NITJ Undergraduate Ordinances and Regulations 2023",
+        "section": "R8.1",
+        "page": 6,
+        "version": "2023",
+        "effective_from": "2023-07-01"
+      }
+    ],
+    "tools_invoked": [
+      {
+        "tool": "get_attendance",
+        "input": {
+          "course_code": "CS201"
+        },
+        "output": {
+          "classes_held": 40,
+          "classes_attended": 30,
+          "attendance_pct": 75.0,
+          "course_code": "CS201"
+        }
+      },
+      {
+        "tool": "exam_eligibility",
+        "input": {
+          "course_code": "CS201"
+        },
+        "output": {
+          "classes_held": 40,
+          "classes_attended": 30,
+          "attendance_pct": 75.0,
+          "course_code": "CS201",
+          "result": "ATTENDANCE_REQUIREMENT_MET"
+        }
+      }
+    ],
+    "rules_applied": [
+      {
+        "rule_id": "NITJ-UG-2023-33-min_attendance_pct",
+        "parameter": "min_attendance_pct",
+        "operator": ">=",
+        "value": "75",
+        "source_doc_id": "NITJ-UG-2023",
+        "source_section": "R8.1"
+      }
+    ],
+    "conflicts_detected": [],
+    "model": "mock",
+    "embedding_backend": "sentence_transformers",
+    "llm_calls": 0,
+    "tokens": 0,
+    "latency_ms": 10.66
+  }
+}

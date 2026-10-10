@@ -1,0 +1,66 @@
+{
+  "health": {
+    "status": "ready",
+    "api": "ready",
+    "sqlite": "ready",
+    "vector_store": "ready",
+    "chunks": 170,
+    "llm": "mock",
+    "model": "qwen2.5:7b-instruct",
+    "embedding_backend": "sentence_transformers",
+    "mock_llm": true
+  },
+  "response": {
+    "trace_id": "4f87e27b20954689",
+    "answer": "I could not find this information in the authorised university sources.",
+    "answer_type": "not_found",
+    "citations": [],
+    "tools_invoked": [],
+    "applied_rules": [],
+    "conflicts_detected": [],
+    "assumptions": [],
+    "explanation": "",
+    "as_of_date": "2026-07-01"
+  },
+  "audit": {
+    "trace_id": "4f87e27b20954689",
+    "timestamp": "2026-10-10T10:28:23.663260+00:00",
+    "answer_type": "not_found",
+    "sources_retrieved": [
+      {
+        "doc_id": "NITJ-UG-2023",
+        "section": "R7.1",
+        "score": 0.1721
+      },
+      {
+        "doc_id": "NITJ-UG-2023",
+        "section": "Page 22 text",
+        "score": 0.1621
+      },
+      {
+        "doc_id": "NITJ-UG-2023",
+        "section": "R2.1",
+        "score": 0.1605
+      },
+      {
+        "doc_id": "NITJ-UG-2023",
+        "section": "R10.1",
+        "score": 0.149
+      },
+      {
+        "doc_id": "NITJ-UG-2023",
+        "section": "Page 5 text",
+        "score": 0.1464
+      }
+    ],
+    "sources_applied": [],
+    "tools_invoked": [],
+    "rules_applied": [],
+    "conflicts_detected": [],
+    "model": "mock",
+    "embedding_backend": "sentence_transformers",
+    "llm_calls": 0,
+    "tokens": 0,
+    "latency_ms": 22.42
+  }
+}
