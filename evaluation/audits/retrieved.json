@@ -1,0 +1,104 @@
+{
+  "health": {
+    "status": "ready",
+    "api": "ready",
+    "sqlite": "ready",
+    "vector_store": "ready",
+    "chunks": 170,
+    "llm": "mock",
+    "model": "qwen2.5:7b-instruct",
+    "embedding_backend": "sentence_transformers",
+    "mock_llm": true
+  },
+  "response": {
+    "trace_id": "afc2b91d7f9e40db",
+    "answer": "The applicable min attendance pct is 75. Upcoming changes exist and are not applied to this date.",
+    "answer_type": "retrieved_fact",
+    "citations": [
+      {
+        "doc_id": "NITJ-UG-2023",
+        "title": "NITJ Undergraduate Ordinances and Regulations 2023",
+        "section": "R8.1",
+        "page": 6,
+        "version": "2023",
+        "effective_from": "2023-07-01"
+      }
+    ],
+    "tools_invoked": [],
+    "applied_rules": [
+      {
+        "rule_id": "NITJ-UG-2023-33-min_attendance_pct",
+        "parameter": "min_attendance_pct",
+        "operator": ">=",
+        "value": "75",
+        "source_doc_id": "NITJ-UG-2023",
+        "source_section": "R8.1"
+      }
+    ],
+    "conflicts_detected": [],
+    "assumptions": [
+      "Document states applicable from the 2023 batch, without an exact commencement date. 2023-07-01 is an academic-year convention for this prototype, not a verified legal effective date. Verify before judging historical questions."
+    ],
+    "explanation": "R8.1 All students must atten d every lecture, tutorial and practical class. The Institute desires 100% attendance. However, a minimum attendance requirement of 75% is compulsory for appearing in the End-semester examination.",
+    "as_of_date": "2026-07-01"
+  },
+  "audit": {
+    "trace_id": "afc2b91d7f9e40db",
+    "timestamp": "2026-10-10T10:28:23.629388+00:00",
+    "answer_type": "retrieved_fact",
+    "sources_retrieved": [
+      {
+        "doc_id": "NITJ-UG-2023",
+        "section": "Page 7 text",
+        "score": 0.5893
+      },
+      {
+        "doc_id": "NITJ-UG-2023",
+        "section": "Page 5 text",
+        "score": 0.5743
+      },
+      {
+        "doc_id": "NITJ-UG-2023",
+        "section": "R8.3",
+        "score": 0.57
+      },
+      {
+        "doc_id": "NITJ-UG-2023",
+        "section": "R8.4",
+        "score": 0.559
+      },
+      {
+        "doc_id": "NITJ-UG-2023",
+        "section": "R8.1",
+        "score": 0.5505
+      }
+    ],
+    "sources_applied": [
+      {
+        "doc_id": "NITJ-UG-2023",
+        "title": "NITJ Undergraduate Ordinances and Regulations 2023",
+        "section": "R8.1",
+        "page": 6,
+        "version": "2023",
+        "effective_from": "2023-07-01"
+      }
+    ],
+    "tools_invoked": [],
+    "rules_applied": [
+      {
+        "rule_id": "NITJ-UG-2023-33-min_attendance_pct",
+        "parameter": "min_attendance_pct",
+        "operator": ">=",
+        "value": "75",
+        "source_doc_id": "NITJ-UG-2023",
+        "source_section": "R8.1"
+      }
+    ],
+    "conflicts_detected": [],
+    "model": "mock",
+    "embedding_backend": "sentence_transformers",
+    "llm_calls": 0,
+    "tokens": 0,
+    "latency_ms": 24964.6
+  }
+}

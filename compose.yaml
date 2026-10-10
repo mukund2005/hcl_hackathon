@@ -1,0 +1,31 @@
+services:
+  api:
+    build: .
+    command: python -m scripts.serve
+    ports: ["127.0.0.1:8000:8000"]
+    environment:
+      DATA_DIR: /app/runtime/nitj
+      HF_HOME: /app/runtime/models
+      MOCK_LLM: ${MOCK_LLM:-false}
+      EMBEDDING_BACKEND: ${EMBEDDING_BACKEND:-sentence_transformers}
+      OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:7b-instruct}
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-}
+      INCLUDE_SYNTHETIC: ${INCLUDE_SYNTHETIC:-false}
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    volumes: ["./runtime:/app/runtime"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=5)"]
+      interval: 10s
+      timeout: 6s
+      start_period: 180s
+      retries: 60
+  ui:
+    build: .
+    command: streamlit run ui.py --server.address 0.0.0.0 --server.port 8501 --browser.gatherUsageStats false
+    ports: ["127.0.0.1:8501:8501"]
+    environment:
+      API_URL: http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy

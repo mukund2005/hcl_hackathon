@@ -1,0 +1,57 @@
+[
+  {
+    "file": "nitj_collector/downloads/B_43729_d245b91f.pdf",
+    "metadata": {
+      "doc_id": "NITJ-UG-2023", "title": "NITJ Undergraduate Ordinances and Regulations 2023",
+      "issuer": "Dr B R Ambedkar National Institute of Technology Jalandhar", "authority_level": 1,
+      "doc_type": "regulation", "version": "2023", "effective_from": "2023-07-01", "effective_to": null,
+      "supersedes": "", "scope_programmes": "B.Tech CSE;B.Tech ECE", "scope_batches": "2023+",
+      "provenance": "https://v1.nitj.ac.in/nitj_files/links/B_43729.pdf", "retrieved_on": "2026-10-10", "synthetic": "N",
+      "effective_date_note": "Document states applicable from the 2023 batch, without an exact commencement date. 2023-07-01 is an academic-year convention for this prototype, not a verified legal effective date. Verify before judging historical questions."
+    }
+  },
+  {
+    "file": "nitj_collector/downloads/1755845844210-Hostel_Instructions_and_Annexure.pdf",
+    "metadata": {
+      "doc_id": "NITJ-HOSTEL-2025", "title": "Hostel instructions for UG 2025 batch, July-December 2025",
+      "issuer": "Office of Chief Warden / Hostel Allotment Committee", "authority_level": 2,
+      "doc_type": "notice", "version": "2025-08-22", "effective_from": "2025-08-22", "effective_to": "2025-12-31",
+      "supersedes": "", "scope_programmes": "B.Tech CSE;B.Tech ECE", "scope_batches": "2025",
+      "provenance": "https://nitj.ac.in/files/1755845844210-Hostel_Instructions_and_Annexure.pdf", "retrieved_on": "2026-10-10", "synthetic": "N",
+      "effective_date_note": "Notice date and July-December session define the demo applicability interval; the end date is the session boundary, not an explicit repeal date.",
+      "excluded_pages": [8],
+      "extraction_note": "Image-only page 8 is an example hostel-floor selection screenshot, visually reviewed and explicitly excluded. Screenshots on other pages are not OCRed; only selectable text is searchable. No live room-availability claim can be made."
+    }
+  },
+  {
+    "file": "nitj_collector/downloads/1767332194168-Supplementary_Examination_Notice_January_2026.pdf",
+    "metadata": {
+      "doc_id": "NITJ-SUPP-JAN-2026", "title": "January 2026 supplementary examination registration notice",
+      "issuer": "Assistant Registrar (Academic)", "authority_level": 2,
+      "doc_type": "notice", "version": "2026-01-02", "effective_from": "2026-01-02", "effective_to": "2026-01-05",
+      "supersedes": "", "scope_programmes": "B.Tech CSE;B.Tech ECE", "scope_batches": "2023+",
+      "provenance": "https://nitj.ac.in/files/1767332194168-Supplementary_Examination_Notice_January_2026.pdf", "retrieved_on": "2026-10-10", "synthetic": "N",
+      "effective_date_note": "Registration window only. Do not present this expired notice as an open registration opportunity after January 5."
+    }
+  },
+  {
+    "file": "sample_documents/nitj_demo_circular.md",
+    "metadata": {
+      "doc_id": "DEMO-NITJ-CIRC", "title": "SYNTHETIC attendance amendment for demonstration only",
+      "issuer": "Fictional demo registrar", "authority_level": 2, "doc_type": "circular", "version": "demo-1",
+      "effective_from": "2026-08-01", "effective_to": null, "supersedes": "NITJ-UG-2023#R8.1",
+      "scope_programmes": "B.Tech CSE;B.Tech ECE", "scope_batches": "2023+", "provenance": "Synthetic hackathon demonstration",
+      "retrieved_on": "2026-10-10", "synthetic": "Y"
+    }
+  },
+  {
+    "file": "sample_documents/placement.md",
+    "metadata": {
+      "doc_id": "DEMO-PLACE", "title": "SYNTHETIC placement policy for demonstration only",
+      "issuer": "Fictional demo placement office", "authority_level": 2, "doc_type": "notice", "version": "demo-1",
+      "effective_from": "2024-07-01", "effective_to": null, "supersedes": "",
+      "scope_programmes": "B.Tech CSE;B.Tech ECE", "scope_batches": "ALL", "provenance": "Synthetic hackathon demonstration",
+      "retrieved_on": "2026-10-10", "synthetic": "Y"
+    }
+  }
+]
